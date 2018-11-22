@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate';
-//import Otamendi from '../../../Resources/images/players/Otamendi.png';
+import Otamendi from '../../../Resources/images/players/Otamendi.png';
+import PLayerCard from '../../UI/playerCard';
 
 
 class HomeCards extends Component {
@@ -50,7 +51,12 @@ class HomeCards extends Component {
               left,
               bottom
             }}>
-              povkrkv
+              <PLayerCard
+                number="30"
+                name="Nik"
+                lastname="Otamendi"
+                bck={Otamendi}
+               />
             </div>
           )
         } }
