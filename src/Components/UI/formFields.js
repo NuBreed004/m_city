@@ -1,17 +1,18 @@
 import React from 'react';
 
-const FormFields = (props) => {
+const FormFields = ({ formdata, change, id }) => {
 
 const renderTemplate = () => {
   let formTemplate = null
 
-  switch (props.formdata.element) {
+  switch (formdata.element) {
     case 'input':
       formTemplate = (
         <div>
           <input
-            {...props.formdata.config}
-            value={props.formdata.value}
+            {...formdata.config}
+            value={formdata.value}
+            onChange={(event) => change({event, id})}
            />
         </div>
       )
